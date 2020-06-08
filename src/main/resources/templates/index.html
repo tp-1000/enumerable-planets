@@ -10,5 +10,15 @@
 <body>
 <h1>Pick a planet:</h1>
 
+<table>
+    <tr>
+        <td>Planet</td>
+        <td>Earth Days for Orbit</td>
+    </tr>
+    <tr th:each="planet, iterator : ${planets}">
+        <td><li th:text="|${iterator.count} ${planet.displayName}|"></li></td>
+        <td th:text="${planet.yearLength}"></td>
+    </tr>
+</table>
 </body>
 </html>
